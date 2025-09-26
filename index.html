@@ -21,6 +21,9 @@
                 </div>
             </div>
             <div class="flex items-center space-x-4">
+                <button id="open-upload-modal" class="flex items-center justify-center bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200 rounded-full w-10 h-10 transition-colors" aria-label="Add new listing">
+                    <span class="text-2xl leading-none">+</span>
+                </button>
                 <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Sign In</a>
             </div>
         </div>
@@ -75,6 +78,23 @@
                     <span class="text-sm text-gray-500">Unlimited possibilities</span>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <!-- Marketplace listings dynamically loaded from the backend -->
+    <section id="marketplace" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold">Community Listings</h2>
+                    <p class="text-gray-600">Discover the latest pieces uploaded by artists and collectors.</p>
+                </div>
+                <p id="listing-feedback" class="hidden text-sm"></p>
+            </div>
+            <div id="listing-empty" class="text-center text-gray-500 py-10 border-2 border-dashed border-gray-200 rounded-lg">
+                No listings have been uploaded yet. Be the first to share your art using the plus button above.
+            </div>
+            <div id="listing-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
     </section>
 
@@ -136,6 +156,63 @@
     <footer class="py-8 bg-white text-gray-500 text-center border-t">
         <p>&copy; 2025 ARMStatues. All rights reserved.</p>
     </footer>
+
+    <!-- Upload listing modal -->
+    <div id="upload-modal" class="hidden fixed inset-0 z-20 bg-black/50 flex items-center justify-center px-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+                <h3 class="text-xl font-semibold">Upload a New Listing</h3>
+                <button id="close-upload-modal" class="text-gray-500 hover:text-gray-700" aria-label="Close upload form">&times;</button>
+            </div>
+            <form id="listing-form" class="px-6 py-6 space-y-4" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Title
+                        <input name="title" type="text" required class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Marble Athena Bust" />
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Price (USD)
+                        <input name="price" type="number" min="0" step="0.01" required class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2450" />
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700 md:col-span-2">
+                        Description
+                        <textarea name="description" rows="3" required class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Describe the materials, craftsmanship, and story behind the piece."></textarea>
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Category
+                        <select name="category" required class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Select a category</option>
+                            <option value="Statues">Statues</option>
+                            <option value="Decorations">Decorations</option>
+                            <option value="Custom Art">Custom Art</option>
+                            <option value="Collections">Collections</option>
+                        </select>
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Material (optional)
+                        <input name="material" type="text" class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Bronze" />
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Dimensions (optional)
+                        <input name="dimensions" type="text" class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="12in x 8in x 6in" />
+                    </label>
+                    <label class="flex flex-col text-sm font-medium text-gray-700">
+                        Condition (optional)
+                        <input name="condition" type="text" class="mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Excellent" />
+                    </label>
+                </div>
+                <label class="flex flex-col text-sm font-medium text-gray-700">
+                    Upload images (up to 5)
+                    <input name="images" type="file" accept="image/*" multiple class="mt-1" />
+                </label>
+                <div id="form-feedback" class="text-sm"></div>
+                <div class="flex items-center justify-end space-x-3 pt-2">
+                    <button type="button" id="cancel-upload" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">Cancel</button>
+                    <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Upload Listing</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
