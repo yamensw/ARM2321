@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Garden Sculpture – ARMStatues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex items-center justify-between h-16">
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="text-2xl font-bold text-blue-700">ARMStatues</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Decorations</a>
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Custom Art</a>
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Collections</a>
+                    <a href="sell.html" class="hover:text-blue-600 transition-colors">Sell Your Art</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        <a href="browse.html" class="text-blue-600 hover:text-blue-800 mb-6 inline-block">&larr; Back to Gallery</a>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left column: images -->
+            <div>
+                <div class="mb-4 h-96 overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1514866186136-26e42e1a99d1?auto=format&fit=crop&w=1200&q=80" alt="Modern Garden Sculpture" class="w-full h-full object-cover">
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <img src="https://images.unsplash.com/photo-1514866186136-26e42e1a99d1?auto=format&fit=crop&w=400&q=80" alt="Thumbnail 1" class="w-full h-24 object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1514866186136-26e42e1a99d1?auto=format&fit=crop&w=401&q=80" alt="Thumbnail 2" class="w-full h-24 object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1514866186136-26e42e1a99d1?auto=format&fit=crop&w=402&q=80" alt="Thumbnail 3" class="w-full h-24 object-cover rounded-lg">
+                </div>
+            </div>
+            <!-- Right column: details -->
+            <div>
+                <h1 class="text-3xl font-bold mb-4">Modern Garden Sculpture</h1>
+                <div class="text-3xl font-bold text-blue-600 mb-6">$780</div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium">Material:</span>
+                        <span>Metal</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium">Dimensions:</span>
+                        <span class="text-right">30" H × 18" W × 18" D</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium">Weight:</span>
+                        <span>60 lbs</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium">Created:</span>
+                        <span>2024</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium">Origin:</span>
+                        <span>Studio Certified</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">Description</h3>
+                    <p class="text-gray-700 leading-relaxed">A contemporary garden sculpture crafted from weather‑resistant metal. Its clean, modern lines and rust‑proof finish make it a striking focal point for outdoor spaces and landscaped gardens.</p>
+                </div>
+                <div class="space-y-4">
+                    <a href="#" class="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold text-center">Add to Cart</a>
+                    <a href="#" class="block w-full border border-gray-300 hover:border-gray-400 text-gray-700 py-3 rounded-lg font-semibold text-center">Add to Wishlist</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-white text-gray-500 text-center border-t">
+        <p>&copy; 2025 ARMStatues. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

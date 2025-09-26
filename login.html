@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMStatues – Sign In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <!-- Sign‑in container -->
+    <div class="w-full max-w-md p-8 bg-white rounded-xl shadow-md fade-in">
+        <a href="index.html" class="text-blue-600 text-sm inline-block mb-4">&larr; Back to Gallery</a>
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold mb-2">Welcome</h1>
+            <p class="text-gray-600 text-sm">Sign in to your account or create a new one to start collecting beautiful art.</p>
+        </div>
+        <!-- Tab navigation (sign in vs sign up) -->
+        <div class="flex mb-6 border rounded-md overflow-hidden">
+            <button class="flex-1 py-2 bg-blue-600 text-white font-semibold">Sign In</button>
+            <button class="flex-1 py-2 bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors" onclick="window.location.href='signup.html'">Sign Up</button>
+        </div>
+        <!-- Sign in form -->
+        <form>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="you@email.com" />
+            <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+            <input type="password" class="w-full border border-gray-300 rounded-md px-4 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" />
+            <div class="flex items-center justify-between mb-4">
+                <label class="flex items-center text-sm text-gray-600"><input type="checkbox" class="mr-2">Remember me</label>
+                <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+            </div>
+            <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-semibold transition-colors" onclick="window.location.href='index.html'">Sign In</button>
+        </form>
+        <div class="flex items-center my-4">
+            <hr class="flex-1 border-gray-300" />
+            <span class="mx-2 text-gray-400 text-sm">OR CONTINUE WITH</span>
+            <hr class="flex-1 border-gray-300" />
+        </div>
+        <button type="button" class="w-full border border-gray-300 hover:bg-gray-100 text-gray-700 py-2 rounded-md font-medium transition-colors" onclick="alert('Google sign‑in coming soon!')">Continue with Google</button>
+        <p class="text-xs text-gray-500 mt-6 text-center">By signing in, you're joining a community of art lovers and creators.</p>
+    </div>
+</body>
+</html>

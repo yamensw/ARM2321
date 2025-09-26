@@ -1,0 +1,36 @@
+/*
+ * Custom styles for ARMStatues demo site
+ *
+ * This stylesheet supplements Tailwind's utility classes with a few
+ * simple rules for hover effects and global behaviour. The aim is to
+ * keep the look and feel consistent with a handcrafted art marketplace
+ * while still leveraging utility CSS for most of the layout.
+ */
+
+/* Ensure box model consistency across the app */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Simple hover scale effect for cards */
+.hover-scale {
+    transition: transform 0.25s ease;
+}
+.hover-scale:hover {
+    transform: scale(1.03);
+}
+
+/* Provide a subtle fade‑in animation for page sections */
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

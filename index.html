@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARM Statues – Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex items-center justify-between h-16">
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="text-2xl font-bold text-blue-700">ARMStatues</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Decorations</a>
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Custom Art</a>
+                    <a href="browse.html" class="hover:text-blue-600 transition-colors">Collections</a>
+                    <a href="sell.html" class="hover:text-blue-600 transition-colors">Sell Your Art</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1508265050944-82f2d53159b2?auto=format&fit=crop&w=1600&q=80" alt="Classical statue" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">Exquisite Art for Your Home</h1>
+            <p class="text-white text-lg md:text-xl max-w-2xl mx-auto mb-6">Discover handcrafted statues, unique decorations and custom art pieces from talented artists around the world.</p>
+            <a href="browse.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold shadow transition-colors">Start Browsing</a>
+        </div>
+    </header>
+
+    <!-- Category cards -->
+    <section class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Browse by Category</h2>
+        <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">From classical sculptures to modern decorative pieces, find the perfect art for every space.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Statues & Sculptures -->
+            <a href="browse.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552928889-8ed20fc27c42?auto=format&fit=crop&w=800&q=80" alt="Statues and sculptures" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Statues &amp; Sculptures</h3>
+                    <p class="text-gray-600 mb-4">Classic and contemporary sculptures in marble, bronze and stone.</p>
+                    <span class="text-sm text-gray-500">150+ pieces</span>
+                </div>
+            </a>
+            <!-- Home Decorations -->
+            <a href="browse.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505591261991-586cb5d7bf0a?auto=format&fit=crop&w=800&q=80" alt="Home decorations" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Home Decorations</h3>
+                    <p class="text-gray-600 mb-4">Elegant vases, pottery and decorative objects for your space.</p>
+                    <span class="text-sm text-gray-500">200+ items</span>
+                </div>
+            </a>
+            <!-- Custom Art -->
+            <a href="browse.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563092215-9c9c171ba5d8?auto=format&fit=crop&w=800&q=80" alt="Custom art" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Custom Art</h3>
+                    <p class="text-gray-600 mb-4">Commissioned pieces tailored to your vision and space.</p>
+                    <span class="text-sm text-gray-500">Unlimited possibilities</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured products teaser -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Featured Pieces</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">A small taste of our curated collection. See more in the browse page.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Sample product card 1 -->
+                <a href="product-1.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529253355930-baff50b4233c?auto=format&fit=crop&w=800&q=80" alt="Classical Venus Statue" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Statues</span>
+                        <h3 class="text-lg font-semibold mt-2">Classical Venus Statue</h3>
+                        <p class="text-sm text-gray-500 mb-2">Hand‑carved marble statue inspired by classical Roman art.</p>
+                        <span class="text-lg font-bold text-blue-600">$2,450</span>
+                    </div>
+                </a>
+                <!-- Sample product card 2 (Royal Lion) -->
+                <a href="product-2.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512152272829-eb48981a80f4?auto=format&fit=crop&w=800&q=80" alt="Royal Lion" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Stone</span>
+                        <h3 class="text-lg font-semibold mt-2">Royal Lion</h3>
+                        <p class="text-sm text-gray-500 mb-2">A majestic marble lion sculpture symbolizing strength and nobility.</p>
+                        <span class="text-lg font-bold text-blue-600">$3,200</span>
+                    </div>
+                </a>
+                <!-- Sample product card 3 -->
+                <a href="product-3.html" class="block bg-white rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529119368496-87f6a8398c29?auto=format&fit=crop&w=800&q=80" alt="Ceramic Vase Collection" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Decorations</span>
+                        <h3 class="text-lg font-semibold mt-2">Ceramic Vase Collection</h3>
+                        <p class="text-sm text-gray-500 mb-2">Set of three handmade ceramic vases with unique glazing techniques.</p>
+                        <span class="text-lg font-bold text-blue-600">$185</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">About Us</h2>
+            <p class="text-gray-700 max-w-3xl mx-auto text-center">ARMStatues is dedicated to connecting collectors and artists who have a passion for sculptural art. Our platform curates beautiful statues, thoughtful home decorations, and bespoke custom pieces from artisans around the world. Whether you’re looking to elevate your living space or find the perfect gift, we provide a trusted marketplace where art comes alive.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white text-gray-500 text-center border-t">
+        <p>&copy; 2025 ARMStatues. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
